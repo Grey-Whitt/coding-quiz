@@ -19,6 +19,12 @@ main {
     border-radius: 10px;
 }
 
+.buttons {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
 .btn {
   outline: none;
   border: none;
@@ -29,12 +35,16 @@ main {
   position: relative;
   top: -3px;
   box-shadow: 0 3px black;
-  margin: 20px;
+  margin : 10px 0;
+  display: block;
+  width: 90%;
 }
 
 .start-btn {
-    font-size: 1rem;
+    font-size: 2.5rem;
     font-weight: bold;
+    margin: auto;
+    height: 100px;
 }
 
 .btn:hover {
@@ -50,4 +60,8 @@ main {
 ul {
     list-style: none;
     padding: 0;
+}
+
+.remove {
+    display: none;
 }

@@ -3,7 +3,7 @@ var answers = document.getElementById('answers');
 var startBtn = document.getElementById('start-btn');
 
 var questions = [{
-    ask: 'which one says blue',
+    ask: 'which one says red',
     answer: ['blue', 'blue', 'blue', 'red'],
     correctAnswer: 'red'
 
@@ -26,13 +26,21 @@ var onPageLoad = function() {
 
 var startQuiz = function() {
     startBtn.parentNode.removeChild(startBtn)
-    title.textContent = questions[activeQuestion].ask;
 
-    for (var i = 0; i < questions[activeQuestion].answer.length; i++) {
-        var item = document.createElement('li');
-        item.className = 'btn'
-        item.textContent = questions[activeQuestion].answer[i];
-        answers.appendChild(item);
+
+    for (i = 0; i < questions.length; i++) {
+        //builds question
+        title.textContent = questions[activeQuestion].ask;
+
+        //builds answers
+        for (var i = 0; i < questions[activeQuestion].answer.length; i++) {
+            var item = document.createElement('button');
+            item.className = 'btn'
+            item.textContent = questions[activeQuestion].answer[i];
+            answers.appendChild(item);
+        }
+
+        
     }
 }
 
