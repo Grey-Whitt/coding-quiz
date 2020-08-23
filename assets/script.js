@@ -15,34 +15,34 @@ var end = 1;
 
 //array of questions with possible and correct answer
 var questions = [{
-    ask: 'which one says red',
-    answer: ['blue', 'yellow', 'green', 'red'],
-    correctAnswer: '3'
+    ask: 'Commonly used data types do not include:',
+    answer: ['alerts', 'booleans', 'strings', 'integers'],
+    correctAnswer: '0'
 
 },
 {
-    ask: 'select e',
-    answer: ['e', 'r', 't', 'y'],
-    correctAnswer: '0'
-},
-{
-    ask: 'select blue',
-    answer: ['blue', 'false', 'false', 'false'],
-    correctAnswer: '0'
-},
-{
-    ask: 'select yes',
-    answer: ['no', 'no', 'yes', 'no'],
+    ask: 'The condition in an if / else statement is enclosed with:',
+    answer: ['quotes', 'curly brackets', 'parenthesis', 'square brackets'],
     correctAnswer: '2'
 },
 {
-    ask: 'select 2',
-    answer: ['1', '2', '3', '4'],
-    correctAnswer: '1'
+    ask: 'Arrays in JavaScript can be used to store:',
+    answer: ['numbers and strings', 'other arrays', 'booleans', 'all of the above'],
+    correctAnswer: '3'
 },
 {
-    ask: 'select g',
-    answer: ['g', 'h', 'j', 'k'],
+    ask: 'String values must be enclosed within ______ when being assigned to variables.',
+    answer: ['commas', 'curly brackets', 'quotes', 'parenthesis'],
+    correctAnswer: '2'
+},
+{
+    ask: 'A very useful tool used during development and debugging for printing content to the debugger is:',
+    answer: ['JavaScript', 'terminal/Bash', 'for loops', 'console.log'],
+    correctAnswer: '3'
+},
+{
+    ask: 'What would you rate this test on a scale of 1 - 4? 4 being good and 1 being bad',
+    answer: ['4', '3', '2', '1'],
     correctAnswer: '0'
 }];
 
