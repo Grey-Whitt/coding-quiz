@@ -19,6 +19,17 @@ main {
     border-radius: 10px;
 }
 
+.timer {
+    display: flex;
+    justify-content: center;
+}
+
+.timer p {
+    padding: 5px;
+    font-weight: bold;
+    font-size: larger;
+}
+
 .buttons {
     display: flex;
     flex-flow: column;
