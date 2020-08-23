@@ -6,6 +6,7 @@ var time = document.getElementById('timeLeft')
 var endQuiz = false;
 var btnId = 0
 var activeQuestion = 0;
+var timeLeft = 59;
 
 //array of questions with possible and correct answer
 var questions = [{
@@ -43,6 +44,27 @@ var questions = [{
 
 
 
+function countdown() {
+  
+    // Use setInterval to call a function every second
+    var timeInterval = setInterval(function() {
+      
+      console.log('count')
+      
+      if (timeLeft > 0) {
+        time.textContent = 'Time Remaining: ' + timeLeft 
+        timeLeft--
+      } else {
+        clearInterval(timeInterval)
+        time.textContent = ''
+      }
+  
+    }, 1000);
+}
+
+
+
+
 
 
 // this function starts on game load
@@ -53,7 +75,8 @@ var onPageLoad = function() {
 
 var startQuiz = function() {
     startBtn.parentNode.removeChild(startBtn)
-    time.textContent = 'time left:'
+    time.textContent = 'Time Remaining: 60'
+    countdown()
     quiz(activeQuestion)
     
 }
@@ -103,3 +126,4 @@ var quiz = function(actQ) {
 onPageLoad();
 
 startBtn.addEventListener('click', startQuiz);
+
