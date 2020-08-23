@@ -4,12 +4,12 @@
     <link rel="stylesheet" href="./assets/style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coding Quiz</title>
+    <title>The Code Quiz</title>
 </head>
 <body>
     <header>
         <h1>The Code Quiz</h1>
-        <p>Current High Score:</p>
+        <p id="scoreBoard"></p>
     </header>
 
     <main>
@@ -22,7 +22,12 @@
         <div class="timer">
             <p id="timeLeft"></p>
         </div>
-        <button class="btn start-btn"></button>
+        <button id="start" class="btn start-btn"></button>
+        <button id="reStart" class="remove" onClick="window.location.reload();"></button>
+        <div id='initials'>
+            <input id="userName" class="remove" type="text" placeholder="Enter Your Initials Here" maxlength="2">
+            <button class="remove btn scoreBtn" id='saveScore'>Save Your Score!</button>
+        </div>
         <div class='buttons' id="answers">
             
         </div>
