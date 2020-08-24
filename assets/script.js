@@ -86,7 +86,12 @@ var restart = function () {
 var onPageLoad = function () {
     title.textContent = 'Press The Button To Start!';
     startBtn.textContent = 'Start';
+    if (localStorage.getItem('score') === null) {
+        scoreBoard.textContent = 'Highscore: Set a Highscore!'
+    } else {
     scoreBoard.textContent = 'Current Highscore: ' + localStorage.getItem('username') + ' - ' + localStorage.getItem('score')
+    }   
+    
 }
 
 var startQuiz = function () {
